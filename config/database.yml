@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  host: localhost
+  database: tinylog_dev
+  username: tinylog_usr
+  password: tinylog
+
+production:
+  url: <%= ENV["DATABASE_URL"] %>
