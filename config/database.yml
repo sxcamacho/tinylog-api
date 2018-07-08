@@ -7,8 +7,15 @@ development:
   <<: *default
   host: localhost
   database: tinylog_dev
-  username: tinylog_usr
-  password: tinylog
+  username: sebastian
+  password: pepeloco
+
+test:
+  <<: *default
+  host: localhost
+  database: tinylog_test
+  username: sebastian
+  password: pepeloco
 
 production:
   url: <%= ENV["DATABASE_URL"] %>

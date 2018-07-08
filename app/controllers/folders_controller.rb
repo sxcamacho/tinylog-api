@@ -1,12 +1,12 @@
 require 'json'
 
-class ClientsController < ApplicationController
-  before_action :set_client, only: [:show, :update, :destroy]
+class FoldersController < ApplicationController
+  before_action :set_folder, only: [:show, :update, :destroy]
 
   def index
     begin
-      clients = Client.all
-      render json: clients
+      folders = Folder.all
+      render json: folders
     rescue => e
       render json: { message: e.message }, :status => 500
     end
@@ -14,8 +14,8 @@ class ClientsController < ApplicationController
 
   def show
     begin
-      if @client.present?
-        render json: @client
+      if @folder.present?
+        render json: @folder
       else
         render :status => :not_found
       end
@@ -26,16 +26,15 @@ class ClientsController < ApplicationController
 
   def create
     begin
-      client = Client.new({
-        :user_id => client_params[:user_id],
-        :title => client_params[:title],
+      folder = Folder.new({
+        :title => folder_params[:title],
         :uid => SecureRandom.urlsafe_base64
       })
 
-      if client.save
-        render json: client, status: :created
+      if folder.save!
+        render json: folder, status: :created
       else
-        render json: client.errors, status: :unprocessable_entity
+        render json: folder.errors, status: :unprocessable_entity
       end
     rescue => e
       render json: { message: e.message }, :status => 500
@@ -44,12 +43,12 @@ class ClientsController < ApplicationController
 
   def update
     begin
-      if @client.present?
-        @client.attributes = client_params
-        if @client.save
-          render json: @client, status: :created
+      if @folder.present?
+        @folder.attributes = folder_params
+        if @folder.save
+          render json: @folder, status: :created
         else
-          render json: client.errors, status: :unprocessable_entity
+          render json: folder.errors, status: :unprocessable_entity
         end
       else
         render :status => :not_found
@@ -61,8 +60,8 @@ class ClientsController < ApplicationController
 
   def destroy
     begin
-      if @client.present?
-        @client.delete
+      if @folder.present?
+        @folder.delete
         render :status => :ok
       else
         render :status => :not_found
@@ -73,11 +72,11 @@ class ClientsController < ApplicationController
   end
 
   private
-  def client_params
-    params.require(:client).permit(:title, :user_id)
+  def folder_params
+    params.require(:folder).permit(:title)
   end
 
-  def set_client
-    @client = Client.where(:uid => params[:client_id]).first
+  def set_folder
+    @folder = Folder.where(:uid => params[:id]).first
   end
 end

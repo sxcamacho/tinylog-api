@@ -33,5 +33,11 @@ module TinyLog
     config.middleware.use Rack::Deflater
 
     config.debug_exception_response_format = :api
+
+    # Configure generators values.
+    config.generators do |g|
+      g.test_framework  :rspec, :fixture => true
+      g.fixture_replacement :factory_bot_rails, dir: "spec/factories"
+    end
   end
 end

@@ -1,7 +1,6 @@
-class CreateClients < ActiveRecord::Migration[5.1]
+class CreateFolders < ActiveRecord::Migration[5.1]
   def change
-    create_table :clients do |t|
-      t.string  :user_id, index: true
+    create_table :folders do |t|
       t.string  :uid, unique: true
       t.string  :title
 

@@ -1,10 +1,10 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :update, :destroy]
-  before_action :set_client
+  before_action :set_folder, only: [:show, :update, :destroy]
 
   def index
     begin
-      logs = @client.logs
+      logs = @folder.logs
       render json: logs
     rescue => e
       render json: { message: e.message }, :status => 500
@@ -29,14 +29,14 @@ class LogsController < ApplicationController
       log = Log.new({
         :text => log_params[:text],
         :log_type => log_params[:log_type].to_sym,
-        :client => @client,
+        :folder => @folder,
         :uid => SecureRandom.urlsafe_base64
       })
 
       if log.save
 
         begin
-          Pusher.trigger('my-channel', @client.uid, :log =>  LogSerializer.new(log))
+          Pusher.trigger('my-channel', @folder.uid, :log =>  LogSerializer.new(log))
         rescue Pusher::Error => e
           # (Pusher::AuthenticationError, Pusher::HTTPError, or Pusher::Error)
         end
@@ -68,8 +68,8 @@ class LogsController < ApplicationController
     params.require(:log).permit(:text, :log_type)
   end
 
-  def set_client
-    @client = Client.where(:uid => params[:client_id]).first
+  def set_folder
+    @folder = Folder.where(:uid => params[:folder_id]).first
   end
 
   def set_log

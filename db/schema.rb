@@ -15,25 +15,23 @@ ActiveRecord::Schema.define(version: 20180320165637) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clients", force: :cascade do |t|
-    t.string "user_id"
+  create_table "folders", force: :cascade do |t|
     t.string "uid"
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at"
     t.datetime "deleted_at"
-    t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
   create_table "logs", force: :cascade do |t|
-    t.bigint "client_id"
+    t.bigint "folder_id"
     t.string "uid"
     t.string "text"
     t.integer "log_type", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at"
     t.datetime "deleted_at"
-    t.index ["client_id"], name: "index_logs_on_client_id"
+    t.index ["folder_id"], name: "index_logs_on_folder_id"
     t.index ["uid"], name: "index_logs_on_uid"
   end
 

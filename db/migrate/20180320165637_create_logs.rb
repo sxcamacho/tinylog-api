@@ -1,7 +1,7 @@
 class CreateLogs < ActiveRecord::Migration[5.1]
   def change
     create_table :logs do |t|
-      t.belongs_to :client, index: true
+      t.belongs_to :folder, index: true
 
       t.string    :uid, unique: true, index: true
       t.string    :text
