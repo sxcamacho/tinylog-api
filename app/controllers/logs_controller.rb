@@ -1,10 +1,10 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :update, :destroy]
-  before_action :set_folder, only: [:show, :update, :destroy]
+  before_action :set_file, only: [:show, :update, :destroy]
 
   def index
     begin
-      logs = @folder.logs
+      logs = @file.logs
       render json: logs
     rescue => e
       render json: { message: e.message }, :status => 500
@@ -26,10 +26,10 @@ class LogsController < ApplicationController
   def create
     begin
 
-      log = Log.new({
+      log = TinyLog::Log.new({
         :text => log_params[:text],
-        :log_type => log_params[:log_type].to_sym,
-        :folder => @folder,
+        :type => log_params[:type].to_sym,
+        :file => @file,
         :uid => SecureRandom.urlsafe_base64
       })
 
@@ -40,7 +40,7 @@ class LogsController < ApplicationController
         rescue Pusher::Error => e
           # (Pusher::AuthenticationError, Pusher::HTTPError, or Pusher::Error)
         end
-
+        
         render json: log, status: :created
       else
         render json: log.errors, status: :unprocessable_entity
@@ -65,15 +65,15 @@ class LogsController < ApplicationController
 
   private
   def log_params
-    params.require(:log).permit(:text, :log_type)
+    params.require(:log).permit(:text, :type)
   end
 
-  def set_folder
-    @folder = Folder.where(:uid => params[:folder_id]).first
+  def set_file
+    @file = TinyLog::File.where(:uid => params[:file_id]).first
   end
 
   def set_log
-    @log = Log.where(:uid => params[:id]).first
+    @log = TinyLog::Log.where(:uid => params[:id]).first
   end
 
 end

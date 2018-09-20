@@ -1,12 +1,12 @@
 require 'json'
 
-class FoldersController < ApplicationController
-  before_action :set_folder, only: [:show, :update, :destroy]
+class FilesController < ApplicationController
+  before_action :set_file, only: [:show, :update, :destroy]
 
   def index
     begin
-      folders = Folder.all
-      render json: folders
+      files = TinyLog::File.all
+      render json: files
     rescue => e
       render json: { message: e.message }, :status => 500
     end
@@ -14,8 +14,8 @@ class FoldersController < ApplicationController
 
   def show
     begin
-      if @folder.present?
-        render json: @folder
+      if @file.present?
+        render json: @file
       else
         render :status => :not_found
       end
@@ -26,15 +26,15 @@ class FoldersController < ApplicationController
 
   def create
     begin
-      folder = Folder.new({
-        :title => folder_params[:title],
+      file = TinyLog::File.new({
+        :name => file_params[:name],
         :uid => SecureRandom.urlsafe_base64
       })
 
-      if folder.save!
-        render json: folder, status: :created
+      if file.save
+        render json: file, status: :created
       else
-        render json: folder.errors, status: :unprocessable_entity
+        render json: file.errors, status: :unprocessable_entity
       end
     rescue => e
       render json: { message: e.message }, :status => 500
@@ -43,12 +43,12 @@ class FoldersController < ApplicationController
 
   def update
     begin
-      if @folder.present?
-        @folder.attributes = folder_params
-        if @folder.save
-          render json: @folder, status: :created
+      if @file.present?
+        @file.attributes = file_params
+        if @file.save
+          render json: @file, status: :created
         else
-          render json: folder.errors, status: :unprocessable_entity
+          render json: file.errors, status: :unprocessable_entity
         end
       else
         render :status => :not_found
@@ -60,8 +60,8 @@ class FoldersController < ApplicationController
 
   def destroy
     begin
-      if @folder.present?
-        @folder.delete
+      if @file.present?
+        @file.delete
         render :status => :ok
       else
         render :status => :not_found
@@ -72,11 +72,11 @@ class FoldersController < ApplicationController
   end
 
   private
-  def folder_params
-    params.require(:folder).permit(:title)
+  def file_params
+    params.require(:file).permit(:name)
   end
 
-  def set_folder
-    @folder = Folder.where(:uid => params[:id]).first
+  def set_file
+    @file = TinyLog::File.where(:uid => params[:id]).first
   end
 end

@@ -1,14 +1,14 @@
 class LogSerializer < ActiveModel::Serializer
-  attributes :uid
+  attributes :id
   attributes :text
   attributes :date
   attributes :type
 
-  def date
-    object.created_at
+  def id
+    object.uid
   end
 
-  def type
-    object.log_type
+  def date
+    object.created_at
   end
 end
