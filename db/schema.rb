@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180320165637) do
     t.bigint "file_id"
     t.string "uid"
     t.string "text"
-    t.integer "type", default: 1
+    t.integer "log_type", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at"
     t.datetime "deleted_at"

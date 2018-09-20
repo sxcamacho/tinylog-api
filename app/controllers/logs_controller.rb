@@ -28,18 +28,18 @@ class LogsController < ApplicationController
 
       log = TinyLog::Log.new({
         :text => log_params[:text],
-        :type => log_params[:type].to_sym,
+        :log_type => log_params[:type].to_sym,
         :file => @file,
         :uid => SecureRandom.urlsafe_base64
       })
 
       if log.save
 
-        begin
-          Pusher.trigger('my-channel', @folder.uid, :log =>  LogSerializer.new(log))
-        rescue Pusher::Error => e
-          # (Pusher::AuthenticationError, Pusher::HTTPError, or Pusher::Error)
-        end
+        # begin
+        #   Pusher.trigger('my-channel', @folder.uid, :log =>  LogSerializer.new(log))
+        # rescue Pusher::Error => e
+        #   (Pusher::AuthenticationError, Pusher::HTTPError, or Pusher::Error)
+        # end
         
         render json: log, status: :created
       else
