@@ -1,11 +1,15 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :update, :destroy]
-  before_action :set_file, only: [:show, :update, :destroy]
+  before_action :set_file, only: [:index, :show, :create, :update, :destroy]
 
   def index
     begin
-      logs = @file.logs
-      render json: logs
+      if @file.nil?
+        render :status => :not_found
+      else
+        logs = @file.logs
+        render json: logs
+      end
     rescue => e
       render json: { message: e.message }, :status => 500
     end
@@ -25,7 +29,6 @@ class LogsController < ApplicationController
 
   def create
     begin
-
       log = TinyLog::Log.new({
         :text => log_params[:text],
         :log_type => log_params[:type].to_sym,
@@ -34,13 +37,11 @@ class LogsController < ApplicationController
       })
 
       if log.save
-
         # begin
         #   Pusher.trigger('my-channel', @folder.uid, :log =>  LogSerializer.new(log))
         # rescue Pusher::Error => e
         #   (Pusher::AuthenticationError, Pusher::HTTPError, or Pusher::Error)
         # end
-        
         render json: log, status: :created
       else
         render json: log.errors, status: :unprocessable_entity
