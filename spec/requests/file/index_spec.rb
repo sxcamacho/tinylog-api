@@ -2,9 +2,12 @@
 require 'rails_helper'
 
 describe 'GET /files' do
+
   let!(:files) { FactoryBot.create_list(:file, 10) }
 
-  before { get '/files', headers: { 'Accept': 'application/json' } }
+  before {
+    get '/files', headers: { 'Accept': 'application/json' }
+  }
 
   it 'returns HTTP status 200' do
     expect(response).to have_http_status 200
@@ -12,6 +15,7 @@ describe 'GET /files' do
 
   it 'returns all files' do
     body = JSON.parse(response.body)
-    expect(body.size).to eq(10)
+    expect(10).to eq(body.size)
   end
+
 end
