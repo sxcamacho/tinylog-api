@@ -6,12 +6,16 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: tinylog
+  database: tinylog_dev
   username: tinyusr
   password: password
 
 test:
-  url: <%= ENV["DATABASE_URL"] %>
+  <<: *default
+  host: localhost
+  database: tinylog_test
+  username: tinyusr
+  password: password
 
 production:
   url: <%= ENV["DATABASE_URL"] %>
