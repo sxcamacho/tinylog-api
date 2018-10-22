@@ -715,3 +715,2481 @@ rubocop \
   --auto-correct
 
  (called from block (2 levels) in <top (required)> at /home/sebastian/Workspace/personal/tinylog/tinylog-api/spec/factories/file.rb:4)
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:48:07 -0300
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (22.7ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 47ms (Views: 18.1ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:48:36 -0300
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (1.7ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:49:13 -0300
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:50:49 -0300
+Processing by FilesController#index as HTML
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-24 00:50:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/files/" for 127.0.0.1 at 2018-09-24 00:51:41 -0300
+Processing by FilesController#create as */*
+  Parameters: {"name"=>"public", "file"=>{"name"=>"public"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "8or7cQ8Tv9VakI-E_6g25w"], ["name", "public"], ["created_at", "2018-09-24 03:51:41.505656"], ["updated_at", "2018-09-24 03:51:41.505656"]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 136ms (Views: 4.1ms | ActiveRecord: 117.7ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:51:46 -0300
+Processing by FilesController#index as HTML
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:51:52 -0300
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:52:06 -0300
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (1.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:53:47 -0300
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:53:50 -0300
+Processing by FilesController#index as application/vnd.api+json
+  [1m[36mTinyLog::File Load (1.1ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.17ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:57:28 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:57:44 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (1.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:57:56 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:00:54 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:04:36 -0300
+Processing by FilesController#index as HTML
+  [1m[36mTinyLog::File Load (1.1ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:04:46 -0300
+Processing by FilesController#index as HTML
+  [1m[36mTinyLog::File Load (3.8ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:06:10 -0300
+Processing by FilesController#index as HTML
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:06:20 -0300
+Processing by FilesController#index as HTML
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 01:13:13 -0300
+Processing by DummyController#greet as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-24 01:13:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:14:17 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:15:19 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 01:16:07 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 08:41:46 -0300
+  [1m[35m (12.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (30.7ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 126ms (Views: 89.8ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 08:52:35 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (1.9ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 08:53:09 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (1.1ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:07:26 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (1.1ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:07:30 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:08:37 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:08:39 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:10:14 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:11:43 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.7ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:11:57 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:12:29 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:13:47 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:13:58 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:14:04 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:14:15 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:14:20 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:14:24 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:14:30 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:14:35 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:15:00 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:15:18 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:15:35 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 09:19:56 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:25:44 -0300
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (43.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 96ms (Views: 38.2ms | ActiveRecord: 55.6ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:31:10 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:31:37 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:32:44 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:33:26 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:33:34 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:33:53 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:34:59 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:35:06 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:35:10 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:35:57 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:36:13 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:36:22 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:39:34 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:40:28 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 20:32:08 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files" for 127.0.0.1 at 2018-09-24 20:55:31 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/file" for 127.0.0.1 at 2018-10-21 16:04:03 -0300
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/file"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:04:12 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"title"=>"untitled", "file"=>{"title"=>"untitled"}}
+Unpermitted parameter: :title
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (40.5ms)[0m  [1m[32mINSERT INTO "files" ("uid", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["uid", "abYXRHHnBO5IySJbjhg_DQ"], ["created_at", "2018-10-21 19:04:12.813882"], ["updated_at", "2018-10-21 19:04:12.813882"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 201 Created in 183ms (Views: 60.9ms | ActiveRecord: 108.6ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:04:37 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "lgU8XTpHYkktpHMshzMRjQ"], ["name", "untitled"], ["created_at", "2018-10-21 19:04:37.626602"], ["updated_at", "2018-10-21 19:04:37.626602"]]
+  [1m[35m (35.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 201 Created in 61ms (Views: 0.9ms | ActiveRecord: 39.4ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:06:03 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "3tC_tHX1SXBAUeVZ8R0Q3w"], ["name", "untitled"], ["created_at", "2018-10-21 19:06:03.007712"], ["updated_at", "2018-10-21 19:06:03.007712"]]
+  [1m[35m (34.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (1.84ms)
+Completed 201 Created in 43ms (Views: 3.2ms | ActiveRecord: 34.7ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:44:24 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "OC9PcplZu2izdIoTZ6BEGw"], ["name", "untitled"], ["created_at", "2018-10-21 19:44:24.631529"], ["updated_at", "2018-10-21 19:44:24.631529"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (1.82ms)
+Completed 201 Created in 43ms (Views: 3.0ms | ActiveRecord: 30.7ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:44:25 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "ZT6EXDHmmnUjWOMZclcqTQ"], ["name", "untitled"], ["created_at", "2018-10-21 19:44:25.820505"], ["updated_at", "2018-10-21 19:44:25.820505"]]
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 201 Created in 49ms (Views: 2.2ms | ActiveRecord: 36.2ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:54:00 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "kBQ6pLZ1LtNpLDnVSu0Juw"], ["name", "untitled"], ["created_at", "2018-10-21 19:54:00.374741"], ["updated_at", "2018-10-21 19:54:00.374741"]]
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 43ms (Views: 3.7ms | ActiveRecord: 27.4ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:54:00 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "444Dq7KxjL4hHfscLVuX5Q"], ["name", "untitled"], ["created_at", "2018-10-21 19:54:01.004439"], ["updated_at", "2018-10-21 19:54:01.004439"]]
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 44ms (Views: 4.5ms | ActiveRecord: 27.7ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:54:05 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "qRz1kPrJ-Wksdzwy1_tkcQ"], ["name", "untitled"], ["created_at", "2018-10-21 19:54:05.682924"], ["updated_at", "2018-10-21 19:54:05.682924"]]
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 55ms (Views: 2.1ms | ActiveRecord: 40.4ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:54:06 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "UuT8hCJkXr7QsYStfy845Q"], ["name", "untitled"], ["created_at", "2018-10-21 19:54:06.241227"], ["updated_at", "2018-10-21 19:54:06.241227"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 43ms (Views: 4.2ms | ActiveRecord: 26.9ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 16:55:06 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "JGhT_VxsefCCG-3AZeHY-g"], ["name", "untitled"], ["created_at", "2018-10-21 19:55:06.025652"], ["updated_at", "2018-10-21 19:55:06.025652"]]
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 30ms (Views: 2.4ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 17:21:32 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "eo7PHsWcTdIvTtUFCd7isA"], ["name", "untitled"], ["created_at", "2018-10-21 20:21:32.961917"], ["updated_at", "2018-10-21 20:21:32.961917"]]
+  [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 50ms (Views: 2.1ms | ActiveRecord: 37.5ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 17:48:32 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "qb82x0GEEbt4CwGUyzmwyA"], ["name", "untitled"], ["created_at", "2018-10-21 20:48:32.763307"], ["updated_at", "2018-10-21 20:48:32.763307"]]
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 40ms (Views: 1.9ms | ActiveRecord: 28.5ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 17:51:58 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "GMOhO5ElPK2mDXSaG3G3lg"], ["name", "untitled"], ["created_at", "2018-10-21 20:51:58.521668"], ["updated_at", "2018-10-21 20:51:58.521668"]]
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 201 Created in 52ms (Views: 2.4ms | ActiveRecord: 35.0ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:06:05 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "JhjQ079wKyhjo8s6jGLNLg"], ["name", "untitled"], ["created_at", "2018-10-21 21:06:05.784340"], ["updated_at", "2018-10-21 21:06:05.784340"]]
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 46ms (Views: 1.9ms | ActiveRecord: 32.9ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:07:10 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "NlclKt2c_PqeUXtAwhwEOg"], ["name", "untitled"], ["created_at", "2018-10-21 21:07:10.608982"], ["updated_at", "2018-10-21 21:07:10.608982"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 59ms (Views: 2.1ms | ActiveRecord: 42.9ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:08:29 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "jtbqg2yiz55aa8-2R_0z3Q"], ["name", "untitled"], ["created_at", "2018-10-21 21:08:29.674235"], ["updated_at", "2018-10-21 21:08:29.674235"]]
+  [1m[35m (37.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 51ms (Views: 1.8ms | ActiveRecord: 39.7ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:43:20 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "B13_7lrAAtzE09wOaJzcsg"], ["name", "untitled"], ["created_at", "2018-10-21 21:43:20.069535"], ["updated_at", "2018-10-21 21:43:20.069535"]]
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 49ms (Views: 2.8ms | ActiveRecord: 36.0ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:43:25 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "6wAbwq-8Y-mliaDxmg3BEA"], ["name", "untitled"], ["created_at", "2018-10-21 21:43:25.424906"], ["updated_at", "2018-10-21 21:43:25.424906"]]
+  [1m[35m (35.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 52ms (Views: 2.3ms | ActiveRecord: 38.3ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:44:03 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "ATdDZ2Hp60E76xLLmnq3Ow"], ["name", "untitled"], ["created_at", "2018-10-21 21:44:03.580770"], ["updated_at", "2018-10-21 21:44:03.580770"]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 40ms (Views: 1.8ms | ActiveRecord: 29.4ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:44:05 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "eaqiJEkBZ869hPcV6BdROw"], ["name", "untitled"], ["created_at", "2018-10-21 21:44:05.126577"], ["updated_at", "2018-10-21 21:44:05.126577"]]
+  [1m[35m (31.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 44ms (Views: 2.0ms | ActiveRecord: 33.1ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:44:14 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "mUd0Z3r2ILQpLcZEjNQ_1w"], ["name", "untitled"], ["created_at", "2018-10-21 21:44:14.183490"], ["updated_at", "2018-10-21 21:44:14.183490"]]
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 42ms (Views: 2.1ms | ActiveRecord: 31.7ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:44:57 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "ajdiUXFkNIuLE2FDv9rBVQ"], ["name", "untitled"], ["created_at", "2018-10-21 21:44:57.697589"], ["updated_at", "2018-10-21 21:44:57.697589"]]
+  [1m[35m (31.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 47ms (Views: 2.3ms | ActiveRecord: 33.7ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:44:59 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "KfKInGTIUlSRuigUNj1qtw"], ["name", "untitled"], ["created_at", "2018-10-21 21:44:59.832135"], ["updated_at", "2018-10-21 21:44:59.832135"]]
+  [1m[35m (33.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 45ms (Views: 1.7ms | ActiveRecord: 35.2ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:45:14 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "5zgCGVsJ6wHgOHmNdUmzmQ"], ["name", "untitled"], ["created_at", "2018-10-21 21:45:14.225719"], ["updated_at", "2018-10-21 21:45:14.225719"]]
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 44ms (Views: 2.0ms | ActiveRecord: 32.8ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:46:01 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "feAV6SF2ugzsVMwrUjrBaQ"], ["name", "untitled"], ["created_at", "2018-10-21 21:46:01.661684"], ["updated_at", "2018-10-21 21:46:01.661684"]]
+  [1m[35m (73.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 87ms (Views: 2.7ms | ActiveRecord: 75.8ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:46:04 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "Ag2BNBs17gss5e-BVDcwpw"], ["name", "untitled"], ["created_at", "2018-10-21 21:46:04.857909"], ["updated_at", "2018-10-21 21:46:04.857909"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 25ms (Views: 2.0ms | ActiveRecord: 13.5ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:47:19 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "zFlOX1wNwpttBS2vZVkCzg"], ["name", "untitled"], ["created_at", "2018-10-21 21:47:19.072065"], ["updated_at", "2018-10-21 21:47:19.072065"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 201 Created in 47ms (Views: 3.1ms | ActiveRecord: 32.0ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:47:21 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "nWplmAQMcF130ZwOIDVzFQ"], ["name", "untitled"], ["created_at", "2018-10-21 21:47:21.932500"], ["updated_at", "2018-10-21 21:47:21.932500"]]
+  [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 201 Created in 53ms (Views: 3.5ms | ActiveRecord: 38.5ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:47:22 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "7uEoYeJSfTDE6v08COr9Qg"], ["name", "untitled"], ["created_at", "2018-10-21 21:47:22.863958"], ["updated_at", "2018-10-21 21:47:22.863958"]]
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 201 Created in 40ms (Views: 2.8ms | ActiveRecord: 26.2ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:47:25 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "FHnz6by0H13s-vIg5iR9GA"], ["name", "untitled"], ["created_at", "2018-10-21 21:47:25.364864"], ["updated_at", "2018-10-21 21:47:25.364864"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 201 Created in 42ms (Views: 2.0ms | ActiveRecord: 28.0ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:48:17 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "cp2QUjtl1RYdSd05dextdA"], ["name", "untitled"], ["created_at", "2018-10-21 21:48:17.684136"], ["updated_at", "2018-10-21 21:48:17.684136"]]
+  [1m[35m (31.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 201 Created in 47ms (Views: 2.9ms | ActiveRecord: 36.1ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:48:21 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "r3Z6Z0VXwKFiFncA8W2yfA"], ["name", "untitled"], ["created_at", "2018-10-21 21:48:21.449482"], ["updated_at", "2018-10-21 21:48:21.449482"]]
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 45ms (Views: 2.1ms | ActiveRecord: 34.0ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:48:22 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "DfHn6fPQKLc8bA4dDBKpcg"], ["name", "untitled"], ["created_at", "2018-10-21 21:48:22.750829"], ["updated_at", "2018-10-21 21:48:22.750829"]]
+  [1m[35m (63.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 75ms (Views: 1.9ms | ActiveRecord: 65.4ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:49:30 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "7PB6dFa5V0HeA6gUr90oJw"], ["name", "untitled"], ["created_at", "2018-10-21 21:49:30.884712"], ["updated_at", "2018-10-21 21:49:30.884712"]]
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 40ms (Views: 1.9ms | ActiveRecord: 29.9ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:51:41 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "cjbZHDF1-5zJwT1lQa2GYA"], ["name", "untitled"], ["created_at", "2018-10-21 21:51:41.754830"], ["updated_at", "2018-10-21 21:51:41.754830"]]
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 51ms (Views: 2.0ms | ActiveRecord: 35.0ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 18:58:04 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "Bvp24ccTa9CrgFkUE-c84A"], ["name", "untitled"], ["created_at", "2018-10-21 21:58:04.787627"], ["updated_at", "2018-10-21 21:58:04.787627"]]
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 201 Created in 51ms (Views: 2.9ms | ActiveRecord: 35.9ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 19:02:56 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "PGYy3-ffJq7k6tbSPX3e8Q"], ["name", "untitled"], ["created_at", "2018-10-21 22:02:56.475478"], ["updated_at", "2018-10-21 22:02:56.475478"]]
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 201 Created in 42ms (Views: 2.0ms | ActiveRecord: 29.5ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 19:03:51 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "hIgMXMBkibOT-FfzRBzGCg"], ["name", "untitled"], ["created_at", "2018-10-21 22:03:51.317839"], ["updated_at", "2018-10-21 22:03:51.317839"]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 201 Created in 32ms (Views: 0.8ms | ActiveRecord: 28.3ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 19:17:27 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "-T2R95tGL9YTA2A66Al0sw"], ["name", "untitled"], ["created_at", "2018-10-21 22:17:27.104334"], ["updated_at", "2018-10-21 22:17:27.104334"]]
+  [1m[35m (139.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 153ms (Views: 2.1ms | ActiveRecord: 141.4ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 19:23:00 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["name", "untitled"], ["created_at", "2018-10-21 22:23:00.548283"], ["updated_at", "2018-10-21 22:23:00.548283"]]
+  [1m[35m (37.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 201 Created in 56ms (Views: 2.5ms | ActiveRecord: 40.9ms)
+
+
+Started GET "/files/m5KttQj460RX7bWRSIVMXw/logs" for 127.0.0.1 at 2018-10-21 19:45:08 -0300
+Processing by LogsController#index as */*
+  Parameters: {"file_id"=>"m5KttQj460RX7bWRSIVMXw"}
+  [1m[36mTinyLog::File Load (0.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "m5KttQj460RX7bWRSIVMXw"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:00:11 -0300
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:00:11 -0300
+Processing by LogsController#create as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  
+ActionController::RoutingError (No route matches [POST] "/files/Em3wIoYZ4mDHlJteSNEAwQ"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mTinyLog::File Load (1.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 500 Internal Server Error in 129ms (Views: 101.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:00:47 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:00:47 -0300
+Processing by LogsController#index as HTML
+  [1m[36mTinyLog::File Load (1.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mTinyLog::File Load (1.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (36.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 103ms (Views: 4.3ms | ActiveRecord: 55.8ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:01:54 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:01:54 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (13.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 32ms (Views: 1.8ms | ActiveRecord: 13.7ms)
+
+
+  [1m[36mTinyLog::Log Load (6.8ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 31ms (Views: 9.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:02:57 -0300
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:02:57 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (4.1ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 15ms (Views: 2.8ms | ActiveRecord: 4.1ms)
+
+
+  [1m[36mTinyLog::File Load (5.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 25ms (Views: 7.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:03:22 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:03:22 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::Log Load (11.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 1.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 39ms (Views: 15.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:03:53 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:03:53 -0300
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 13ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.8ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 23ms (Views: 10.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:05:22 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:05:22 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 21ms (Views: 3.3ms | ActiveRecord: 3.7ms)
+
+
+  [1m[36mTinyLog::File Load (3.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 21ms (Views: 7.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:05:39 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:05:39 -0300
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:05:54 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:05:54 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:06:42 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"hello world! this is my first log!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (37.1ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "3ny3gavTLIriwz5a8VHf8w"], ["text", "hello world! this is my first log!"], ["created_at", "2018-10-21 23:06:42.218544"], ["updated_at", "2018-10-21 23:06:42.218544"]]
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 201 Created in 70ms (Views: 4.0ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:06:49 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:06:49 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.9ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 16ms (Views: 4.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:42:09 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:42:09 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:42:45 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:42:45 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (3.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mTinyLog::Log Load (1.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:43:04 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:43:04 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:57:54 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:57:54 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+  [1m[36mTinyLog::File Load (1.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 3.9ms)
+
+
+  [1m[36mTinyLog::Log Load (4.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.23ms)
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:58:07 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:58:07 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 14ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:59:37 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:59:37 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 20:59:47 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 20:59:47 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:01:47 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:01:47 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 2.3ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:01:58 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:01:58 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.1ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (3.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mTinyLog::Log Load (3.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 13ms (Views: 4.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:02:24 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:02:24 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mTinyLog::File Load (2.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:03:04 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:03:04 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (3.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:03:20 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:03:20 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTinyLog::File Load (0.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:11:08 -0300
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:11:08 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (10.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 42ms (Views: 13.4ms | ActiveRecord: 24.8ms)
+
+
+  [1m[36mTinyLog::Log Load (0.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 200 OK in 57ms (Views: 13.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:11:20 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:11:20 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 3.7ms)
+
+
+  [1m[36mTinyLog::File Load (1.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:11:44 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "GG4c-KKMmYhpUGPbgqzMNw"], ["text", "test!"], ["created_at", "2018-10-22 00:11:44.210066"], ["updated_at", "2018-10-22 00:11:44.210066"]]
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 1091ms (Views: 3.2ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:12:26 -0300
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:12:26 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 16ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.08ms)
+Completed 200 OK in 45ms (Views: 20.1ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:12:37 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "56qpH1OW0zVb4KUee2_IhQ"], ["text", "test!"], ["created_at", "2018-10-22 00:12:37.779715"], ["updated_at", "2018-10-22 00:12:37.779715"]]
+  [1m[35m (35.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 833ms (Views: 1.8ms | ActiveRecord: 36.4ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:12:55 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "ZcqAMfN7BapatwK-lcRC7g"], ["text", "test!"], ["created_at", "2018-10-22 00:12:55.102967"], ["updated_at", "2018-10-22 00:12:55.102967"]]
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 201 Created in 253ms (Views: 1.2ms | ActiveRecord: 35.1ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:14:56 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "5Fv12wWODE_0RaUvwVBwvw"], ["text", "test!"], ["created_at", "2018-10-22 00:14:56.945137"], ["updated_at", "2018-10-22 00:14:56.945137"]]
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 201 Created in 894ms (Views: 2.9ms | ActiveRecord: 43.0ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:15:09 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "Cd1ct9rcVhMO8EoP39_aWg"], ["text", "test!"], ["created_at", "2018-10-22 00:15:09.704310"], ["updated_at", "2018-10-22 00:15:09.704310"]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 201 Created in 217ms (Views: 0.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:17:27 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:17:27 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (2.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 31ms (Views: 15.1ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mTinyLog::Log Load (5.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.98ms)
+Completed 200 OK in 29ms (Views: 8.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:17:30 -0300
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:17:30 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.54ms)
+Completed 200 OK in 33ms (Views: 17.6ms | ActiveRecord: 4.6ms)
+
+
+  [1m[36mTinyLog::File Load (1.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 200 OK in 37ms (Views: 2.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:17:46 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 11111111111111111111!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "VZZsScxgMp-V5FON9_oigg"], ["text", "test 11111111111111111111!"], ["created_at", "2018-10-22 00:17:46.165614"], ["updated_at", "2018-10-22 00:17:46.165614"]]
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 933ms (Views: 2.6ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:24:16 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:24:16 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (1.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mTinyLog::Log Load (4.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.29ms)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:26:17 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:26:17 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (9.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 200 OK in 28ms (Views: 2.1ms | ActiveRecord: 9.3ms)
+
+
+  [1m[36mTinyLog::Log Load (6.8ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 29ms (Views: 10.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:26:27 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:26:27 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (1.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 21ms (Views: 8.8ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mTinyLog::Log Load (4.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.4ms)
+Completed 200 OK in 26ms (Views: 12.1ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:27:05 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 22222222222!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "S5b9vOcIp0E_UfjZPi-nAw"], ["text", "test 22222222222!"], ["created_at", "2018-10-22 00:27:05.870557"], ["updated_at", "2018-10-22 00:27:05.870557"]]
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 201 Created in 873ms (Views: 2.5ms | ActiveRecord: 36.6ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:29:27 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:29:27 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 3.6ms)
+
+
+  [1m[36mTinyLog::File Load (3.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (2.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 24ms (Views: 8.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:29:35 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:29:35 -0300
+Processing by LogsController#index as HTML
+  [1m[36mTinyLog::File Load (1.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mTinyLog::File Load (2.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (2.9ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.87ms)
+Completed 200 OK in 25ms (Views: 13.9ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:29:42 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 22222222222!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "5FLMRd6jPKCNSl4qlwnaIQ"], ["text", "test 22222222222!"], ["created_at", "2018-10-22 00:29:42.649648"], ["updated_at", "2018-10-22 00:29:42.649648"]]
+  [1m[35m (49.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 201 Created in 882ms (Views: 3.4ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:49:03 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:49:03 -0300
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Processing by LogsController#index as HTML
+Completed 200 OK in 18ms (Views: 4.3ms | ActiveRecord: 1.2ms)
+
+
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.1ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.9ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.79ms)
+Completed 200 OK in 31ms (Views: 20.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:49:09 -0300
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:49:09 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (4.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+  [1m[36mTinyLog::File Load (7.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 4.5ms | ActiveRecord: 4.4ms)
+
+
+  [1m[36mTinyLog::Log Load (5.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.4ms)
+Completed 200 OK in 53ms (Views: 19.5ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:49:20 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:49:20 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:50:47 -0300
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:50:47 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (1.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (3.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 22ms (Views: 3.2ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mTinyLog::Log Load (10.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 39ms (Views: 11.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:51:02 -0300
+Processing by FilesController#show as HTML
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:51:02 -0300
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (3.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (1.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mTinyLog::Log Load (4.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.84ms)
+Completed 200 OK in 25ms (Views: 11.7ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:51:06 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 22222222222!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "gOq0CxjZkCsIQ_2xpe-YAg"], ["text", "test 22222222222!"], ["created_at", "2018-10-22 00:51:06.982052"], ["updated_at", "2018-10-22 00:51:06.982052"]]
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 201 Created in 902ms (Views: 2.3ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 21:56:24 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:56:24 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (6.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+  [1m[36mTinyLog::File Load (1.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 5.0ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mTinyLog::Log Load (4.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.39ms)
+Completed 200 OK in 44ms (Views: 24.0ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:56:37 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 22222222222!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "H9hJvNHUz6D_G7Apvssc4A"], ["text", "test 22222222222!"], ["created_at", "2018-10-22 00:56:37.675575"], ["updated_at", "2018-10-22 00:56:37.675575"]]
+  [1m[35m (249.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (9.58ms)
+Completed 201 Created in 1126ms (Views: 11.3ms | ActiveRecord: 251.0ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:56:50 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 333333333!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "99xFPyv5GovQhYoSlJLUMQ"], ["text", "test 333333333!"], ["created_at", "2018-10-22 00:56:50.315593"], ["updated_at", "2018-10-22 00:56:50.315593"]]
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 240ms (Views: 2.4ms | ActiveRecord: 30.9ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 21:59:49 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 333333333!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "b_o2x2cepKmt5SdnWj3f5w"], ["text", "test 333333333!"], ["created_at", "2018-10-22 00:59:49.067376"], ["updated_at", "2018-10-22 00:59:49.067376"]]
+  [1m[35m (33.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 201 Created in 896ms (Views: 3.0ms | ActiveRecord: 34.9ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 22:01:24 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 333333333!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "sC8Z3-WdKp4KRtBhK2CB6Q"], ["text", "test 333333333!"], ["created_at", "2018-10-22 01:01:24.984505"], ["updated_at", "2018-10-22 01:01:24.984505"]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 881ms (Views: 4.0ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ" for 127.0.0.1 at 2018-10-21 22:01:38 -0300
+Processing by FilesController#show as HTML
+Started GET "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 22:01:38 -0300
+  Parameters: {"id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (2.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (4.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (2.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 41]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.74ms)
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 40ms (Views: 18.9ms | ActiveRecord: 6.5ms)
+
+
+Completed 200 OK in 44ms (Views: 28.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 22:01:49 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 333333333!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "MLpZ1GZaTQdrdrMHQkOeOg"], ["text", "test 333333333!"], ["created_at", "2018-10-22 01:01:49.434343"], ["updated_at", "2018-10-22 01:01:49.434343"]]
+  [1m[35m (28.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 201 Created in 235ms (Views: 2.1ms | ActiveRecord: 30.0ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 22:02:37 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 333333333!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "HRTTyfhrcx6AEA_Xsng35w"], ["text", "test 333333333!"], ["created_at", "2018-10-22 01:02:37.407354"], ["updated_at", "2018-10-22 01:02:37.407354"]]
+  [1m[35m (32.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 201 Created in 974ms (Views: 5.3ms | ActiveRecord: 40.8ms)
+
+
+Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 22:03:25 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 333333333!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "KpY9N9B1t7o8Y6ffxFEfOA"], ["text", "test 333333333!"], ["created_at", "2018-10-22 01:03:25.628755"], ["updated_at", "2018-10-22 01:03:25.628755"]]
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 853ms (Views: 4.4ms | ActiveRecord: 31.8ms)
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Started POST "/files/Em3wIoYZ4mDHlJteSNEAwQ/logs" for 127.0.0.1 at 2018-10-21 22:29:56 -0300
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 4444!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"Em3wIoYZ4mDHlJteSNEAwQ"}
+  [1m[36mTinyLog::File Load (14.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Em3wIoYZ4mDHlJteSNEAwQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (61.0ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 41], ["uid", "GY3ymwuWDoDE2RKRsQt2MA"], ["text", "test 4444!"], ["created_at", "2018-10-22 01:29:56.981480"], ["updated_at", "2018-10-22 01:29:56.981480"]]
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 201 Created in 1237ms (Views: 4.1ms | ActiveRecord: 129.5ms)
+
+
+Started POST "/files" for 127.0.0.1 at 2018-10-21 22:30:11 -0300
+Processing by FilesController#create as HTML
+  Parameters: {"name"=>"untitled", "file"=>{"name"=>"untitled"}}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (43.8ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["name", "untitled"], ["created_at", "2018-10-22 01:30:12.004535"], ["updated_at", "2018-10-22 01:30:12.004535"]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 82ms (Views: 3.0ms | ActiveRecord: 63.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:30:12 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 22:30:12 -0300
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::Log Load (5.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 20ms (Views: 6.8ms | ActiveRecord: 6.7ms)
+
+
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 24ms (Views: 1.5ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:30:35 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 4444!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 42], ["uid", "O9tEwLCya8aXAswW8qk4rw"], ["text", "test 4444!"], ["created_at", "2018-10-22 01:30:35.700935"], ["updated_at", "2018-10-22 01:30:35.700935"]]
+  [1m[35m (35.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 201 Created in 852ms (Views: 12.5ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 22:32:02 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:32:02 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (6.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 200 OK in 15ms (Views: 5.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 22:32:20 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:32:20 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:44:50 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 55!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 42], ["uid", "PH32g2_l21uqUdgwbPa63Q"], ["text", "test 55!"], ["created_at", "2018-10-22 01:44:50.166415"], ["updated_at", "2018-10-22 01:44:50.166415"]]
+  [1m[35m (26.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 201 Created in 895ms (Views: 2.5ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 22:45:11 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:45:11 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mTinyLog::File Load (1.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:45:52 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 6!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 42], ["uid", "_G4Vez10yUzmwWf2Kd2Jdw"], ["text", "test 6!"], ["created_at", "2018-10-22 01:45:52.024734"], ["updated_at", "2018-10-22 01:45:52.024734"]]
+  [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 201 Created in 884ms (Views: 2.6ms | ActiveRecord: 29.8ms)
+
+
+Started POST "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:46:05 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 7!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 42], ["uid", "QW8_bT3UZW99rzIW-YrBrg"], ["text", "test 7!"], ["created_at", "2018-10-22 01:46:05.577458"], ["updated_at", "2018-10-22 01:46:05.577458"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.61ms)
+Completed 201 Created in 231ms (Views: 2.2ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 22:49:17 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 22:49:17 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:25:42 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:25:42 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mTinyLog::File Load (3.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:25:50 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:25:50 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTinyLog::File Load (1.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 14ms (Views: 4.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:25:55 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:25:55 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (3.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mTinyLog::File Load (2.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:26:08 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:26:08 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.08ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mTinyLog::File Load (3.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 19ms (Views: 1.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:26:10 -0300
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:26:10 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.13ms)
+  [1m[36mTinyLog::File Load (2.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 1.6ms)
+
+
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 9ms (Views: 1.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:28:26 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 8!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 42], ["uid", "hQjyoKs_4hIUuETBhU7B4A"], ["text", "test 8!"], ["created_at", "2018-10-22 02:28:26.298881"], ["updated_at", "2018-10-22 02:28:26.298881"]]
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 201 Created in 898ms (Views: 2.1ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:53:04 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:53:04 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-21 23:58:31 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-21 23:58:31 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (2.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:01:07 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:01:07 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:02:01 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:02:01 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:02:16 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:02:16 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+  [1m[36mTinyLog::File Load (2.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTinyLog::Log Load (1.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:02:19 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:02:19 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (3.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.8ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.77ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:02:44 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:02:44 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTinyLog::File Load (1.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.26ms)
+Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:02:52 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:02:52 -0300
+Processing by FilesController#show as HTML
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::Log Load (1.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 2.5ms)
+
+
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:03:33 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:03:33 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.1ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:03:41 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:03:41 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTinyLog::File Load (3.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.95ms)
+Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:04:01 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:04:01 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (1.1ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mTinyLog::Log Load (6.9ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.86ms)
+Completed 200 OK in 21ms (Views: 5.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:04:14 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:04:14 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+  [1m[36mTinyLog::Log Load (1.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:06:19 -0300
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:06:19 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mTinyLog::File Load (3.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.77ms)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:06:59 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:06:59 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mTinyLog::File Load (1.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:07:12 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:07:12 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:09:48 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:09:48 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (2.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mTinyLog::File Load (2.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.96ms)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:09:57 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:09:57 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (3.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 3.7ms)
+
+
+  [1m[36mTinyLog::Log Load (4.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.71ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:10:09 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:10:09 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.8ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.89ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:11:12 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:11:12 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:11:45 -0300
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:11:45 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.0ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (4.9ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 4.9ms)
+
+
+  [1m[36mTinyLog::Log Load (3.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.3ms)
+Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:13:05 -0300
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:13:05 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTinyLog::File Load (3.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.5ms)
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:13:09 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:13:09 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:14:44 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (1.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:14:44 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:18:28 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:18:28 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (2.7ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mTinyLog::File Load (2.8ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg" for 127.0.0.1 at 2018-10-22 00:19:19 -0300
+Processing by FilesController#show as HTML
+  Parameters: {"id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:19:19 -0300
+Processing by LogsController#index as HTML
+  Parameters: {"file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 42]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.96ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/files/qhGYuxXVf-nHLxz8Q8ypGg/logs" for 127.0.0.1 at 2018-10-22 00:22:32 -0300
+Processing by LogsController#create as */*
+  Parameters: {"log"=>{"text"=>"test 8!", "type"=>"TINY_LOG_INFO"}, "file_id"=>"qhGYuxXVf-nHLxz8Q8ypGg"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qhGYuxXVf-nHLxz8Q8ypGg"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 42], ["uid", "t-23hsU7K51TibfyN3Zc0w"], ["text", "test 8!"], ["created_at", "2018-10-22 03:22:32.553182"], ["updated_at", "2018-10-22 03:22:32.553182"]]
+  [1m[35m (33.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 201 Created in 1712ms (Views: 1.6ms | ActiveRecord: 36.3ms)
+
+

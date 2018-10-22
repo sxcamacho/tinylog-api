@@ -37,11 +37,11 @@ class LogsController < ApplicationController
       })
 
       if log.save
-        # begin
-        #   Pusher.trigger('my-channel', @folder.uid, :log =>  LogSerializer.new(log))
-        # rescue Pusher::Error => e
-        #   (Pusher::AuthenticationError, Pusher::HTTPError, or Pusher::Error)
-        # end
+        begin
+          Pusher.trigger(@file.uid, 'log', LogSerializer.new(log))
+        rescue Pusher::Error => e
+
+        end
         render json: log, status: :created
       else
         render json: log.errors, status: :unprocessable_entity

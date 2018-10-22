@@ -44,7 +44,7 @@ Rails.application.configure do
   Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
       # In development, we don't care about the origin.
-      origins 'lvh.me', 'localhost:4200',
+      origins 'lvh.me', 'localhost:3600',
       /\Ahttp:\/\/192\.168\.0\.\d{1,3}(:\d+)?\z/,
       /\Ahttp:\/\/192\.168\.1\.\d{1,9}(:\d+)?\z/
       # regular expressions can be used here

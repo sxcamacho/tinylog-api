@@ -23014,3 +23014,840 @@ Processing by LogsController#show as JSON
 Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms)
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (37.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (82.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "files" DISABLE TRIGGER ALL;ALTER TABLE "logs" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (72.5ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+             tablename <> 'schema_migrations'  AND tablename <> 'ar_internal_metadata'  AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (42.4ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'tinylog_test'[0m
+  [1m[35m (406.0ms)[0m  [1m[35mTRUNCATE TABLE "public"."files", "public"."logs" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "files" ENABLE TRIGGER ALL;ALTER TABLE "logs" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started POST "/files" for 127.0.0.1 at 2018-09-24 00:46:47 -0300
+Processing by FilesController#create as JSON
+  Parameters: {"file"=>{"name"=>"test"}}
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "J9inXOeai2MRvVbouLj1sg"], ["name", "test"], ["created_at", "2018-09-24 03:46:47.531923"], ["updated_at", "2018-09-24 03:46:47.531923"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 98ms (Views: 42.1ms | ActiveRecord: 33.8ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started POST "/files" for 127.0.0.1 at 2018-09-24 00:46:47 -0300
+Processing by FilesController#create as JSON
+  Parameters: {"file"=>{"name"=>"test"}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "NoF8R1g3EqRWbijRXUgLXg"], ["name", "test"], ["created_at", "2018-09-24 03:46:47.604500"], ["updated_at", "2018-09-24 03:46:47.604500"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 9ms (Views: 1.8ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "nOgxGVMFzhKUsy8q6YIhPA"], ["name", "Job"], ["created_at", "2018-09-24 03:46:48.326612"], ["updated_at", "2018-09-24 03:46:48.326612"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/nOgxGVMFzhKUsy8q6YIhPA" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#destroy as JSON
+  Parameters: {"id"=>"nOgxGVMFzhKUsy8q6YIhPA"}
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "nOgxGVMFzhKUsy8q6YIhPA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "files" SET "deleted_at" = '2018-09-24 03:46:48.347465' WHERE "files"."deleted_at" IS NULL AND "files"."id" = $1[0m  [["id", 3]]
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "vjTLm8sy8zyywFqKqWaLFA"], ["name", "Zoolab"], ["created_at", "2018-09-24 03:46:48.355960"], ["updated_at", "2018-09-24 03:46:48.355960"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/vjTLm8sy8zyywFqKqWaLFA" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#destroy as JSON
+  Parameters: {"id"=>"vjTLm8sy8zyywFqKqWaLFA"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "vjTLm8sy8zyywFqKqWaLFA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "files" SET "deleted_at" = '2018-09-24 03:46:48.359505' WHERE "files"."deleted_at" IS NULL AND "files"."id" = $1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+Started GET "/files/vjTLm8sy8zyywFqKqWaLFA" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#show as JSON
+  Parameters: {"id"=>"vjTLm8sy8zyywFqKqWaLFA"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "vjTLm8sy8zyywFqKqWaLFA"], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "9rRYyvLRi91jC9k_FdTrvw"], ["name", "Pannier"], ["created_at", "2018-09-24 03:46:48.365303"], ["updated_at", "2018-09-24 03:46:48.365303"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "URLm51gQgDByzptSvT_xrA"], ["name", "Redhold"], ["created_at", "2018-09-24 03:46:48.367025"], ["updated_at", "2018-09-24 03:46:48.367025"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "kCNg33qP_L4lUw6fgmlppQ"], ["name", "Konklab"], ["created_at", "2018-09-24 03:46:48.368762"], ["updated_at", "2018-09-24 03:46:48.368762"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "veEHOHv9lgr5u2N31_VrpA"], ["name", "Duobam"], ["created_at", "2018-09-24 03:46:48.370282"], ["updated_at", "2018-09-24 03:46:48.370282"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "MyHowvFp60P0HvRjvHacjQ"], ["name", "Konklux"], ["created_at", "2018-09-24 03:46:48.371862"], ["updated_at", "2018-09-24 03:46:48.371862"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "SakPuidKHav-z_OC0S3P6A"], ["name", "Regrant"], ["created_at", "2018-09-24 03:46:48.373388"], ["updated_at", "2018-09-24 03:46:48.373388"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "VGFTg1zGhJSiXseqhuFVmQ"], ["name", "Tin"], ["created_at", "2018-09-24 03:46:48.374902"], ["updated_at", "2018-09-24 03:46:48.374902"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "37yRAlx27InI4-HePqC2pw"], ["name", "Redhold"], ["created_at", "2018-09-24 03:46:48.376450"], ["updated_at", "2018-09-24 03:46:48.376450"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "zy2LbXKMhLy6dn9CEzdqkQ"], ["name", "Keylex"], ["created_at", "2018-09-24 03:46:48.378055"], ["updated_at", "2018-09-24 03:46:48.378055"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "4w2NWhpq9MF7rYSe8m4GjQ"], ["name", "Zathin"], ["created_at", "2018-09-24 03:46:48.380217"], ["updated_at", "2018-09-24 03:46:48.380217"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "5RiX85WUV5Rz-4-C_-6_Ww"], ["name", "Opela"], ["created_at", "2018-09-24 03:46:48.387404"], ["updated_at", "2018-09-24 03:46:48.387404"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "dnSXsQD01qddQ2AUo8mu5g"], ["name", "Transcof"], ["created_at", "2018-09-24 03:46:48.389059"], ["updated_at", "2018-09-24 03:46:48.389059"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "pG1SEHHumssuX-DsTLN1vA"], ["name", "Prodder"], ["created_at", "2018-09-24 03:46:48.390588"], ["updated_at", "2018-09-24 03:46:48.390588"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "mDEgcymrTrzSGHQya69BnA"], ["name", "Holdlamis"], ["created_at", "2018-09-24 03:46:48.392224"], ["updated_at", "2018-09-24 03:46:48.392224"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "SqZWU1HtlcQ0HYjmo77bpQ"], ["name", "Stringtough"], ["created_at", "2018-09-24 03:46:48.393826"], ["updated_at", "2018-09-24 03:46:48.393826"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "rAFyKbyKTeZSI3JrmdwKOQ"], ["name", "Matsoft"], ["created_at", "2018-09-24 03:46:48.395444"], ["updated_at", "2018-09-24 03:46:48.395444"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "9gqZ_k67R066ZSdsT3JSdQ"], ["name", "Solarbreeze"], ["created_at", "2018-09-24 03:46:48.397002"], ["updated_at", "2018-09-24 03:46:48.397002"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "tE5EyKIxeQkrFXtuJOLEgQ"], ["name", "Tres-Zap"], ["created_at", "2018-09-24 03:46:48.398524"], ["updated_at", "2018-09-24 03:46:48.398524"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "u6J6mM1obhUzlaEe1K0ybg"], ["name", "Alpha"], ["created_at", "2018-09-24 03:46:48.400127"], ["updated_at", "2018-09-24 03:46:48.400127"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "gDZe_EVZrz6aDWNdxixIHA"], ["name", "Konklux"], ["created_at", "2018-09-24 03:46:48.401877"], ["updated_at", "2018-09-24 03:46:48.401877"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "uBOHoZ_1gq3FNl9x40KHRA"], ["name", "Stringtough"], ["created_at", "2018-09-24 03:46:48.408428"], ["updated_at", "2018-09-24 03:46:48.408428"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/uBOHoZ_1gq3FNl9x40KHRA" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#show as JSON
+  Parameters: {"id"=>"uBOHoZ_1gq3FNl9x40KHRA"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "uBOHoZ_1gq3FNl9x40KHRA"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "YEvn8oN4wODkZ2bSN-QZ_g"], ["name", "Bigtax"], ["created_at", "2018-09-24 03:46:48.415121"], ["updated_at", "2018-09-24 03:46:48.415121"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/YEvn8oN4wODkZ2bSN-QZ_g" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#show as JSON
+  Parameters: {"id"=>"YEvn8oN4wODkZ2bSN-QZ_g"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "YEvn8oN4wODkZ2bSN-QZ_g"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "Gdl13y3ArrbMzz_5jKuO5g"], ["name", "Zaam-Dox"], ["created_at", "2018-09-24 03:46:48.421618"], ["updated_at", "2018-09-24 03:46:48.421618"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started PATCH "/files/Gdl13y3ArrbMzz_5jKuO5g" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#update as JSON
+  Parameters: {"file"=>{"name"=>"Trippledex"}, "id"=>"Gdl13y3ArrbMzz_5jKuO5g"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Gdl13y3ArrbMzz_5jKuO5g"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "files" SET "name" = $1, "updated_at" = $2 WHERE "files"."id" = $3[0m  [["name", "Trippledex"], ["updated_at", "2018-09-24 03:46:48.425453"], ["id", 27]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "lUXYMrg_j_n8UlyZ1qy4vA"], ["name", "Asoka"], ["created_at", "2018-09-24 03:46:48.431110"], ["updated_at", "2018-09-24 03:46:48.431110"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started PATCH "/files/lUXYMrg_j_n8UlyZ1qy4vA" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by FilesController#update as JSON
+  Parameters: {"file"=>{"name"=>"Asoka"}, "id"=>"lUXYMrg_j_n8UlyZ1qy4vA"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "lUXYMrg_j_n8UlyZ1qy4vA"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 201 Created in 2ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "QpSdGcRSCZMeGmCH7ZJyZQ"], ["name", "Mat Lam Tam"], ["created_at", "2018-09-24 03:46:48.438320"], ["updated_at", "2018-09-24 03:46:48.438320"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/files/QpSdGcRSCZMeGmCH7ZJyZQ/logs" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#create as JSON
+  Parameters: {"log"=>{"text"=>"Quo in excepturi. Et assumenda libero. Pariatur autem voluptas.", "type"=>"TINY_LOG_WARNING"}, "file_id"=>"QpSdGcRSCZMeGmCH7ZJyZQ"}
+  [1m[36mTinyLog::File Load (1.2ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "QpSdGcRSCZMeGmCH7ZJyZQ"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 29], ["uid", "M1_eNaImwdrpAOjIZOC0dw"], ["text", "Quo in excepturi. Et assumenda libero. Pariatur autem voluptas."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.569316"], ["updated_at", "2018-09-24 03:46:48.569316"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 201 Created in 90ms (Views: 18.4ms | ActiveRecord: 12.7ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "qu5IjsBR8PYECVGiGhAEMw"], ["name", "Tres-Zap"], ["created_at", "2018-09-24 03:46:48.606340"], ["updated_at", "2018-09-24 03:46:48.606340"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 30], ["uid", "wSPkV99COpwJZk_ArgjMHw"], ["text", "Autem unde quae. Aut ut reprehenderit. Asperiores voluptas et."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.613615"], ["updated_at", "2018-09-24 03:46:48.613615"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/qu5IjsBR8PYECVGiGhAEMw/logs/wSPkV99COpwJZk_ArgjMHw/" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#destroy as JSON
+  Parameters: {"file_id"=>"qu5IjsBR8PYECVGiGhAEMw", "id"=>"wSPkV99COpwJZk_ArgjMHw"}
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "wSPkV99COpwJZk_ArgjMHw"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "qu5IjsBR8PYECVGiGhAEMw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "logs" SET "deleted_at" = '2018-09-24 03:46:48.621798' WHERE "logs"."deleted_at" IS NULL AND "logs"."id" = $1[0m  [["id", 2]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "HvRkV6WRiLzA-0Vg16T1HQ"], ["name", "Temp"], ["created_at", "2018-09-24 03:46:48.627785"], ["updated_at", "2018-09-24 03:46:48.627785"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 31], ["uid", "iqM2QrcwsWYKs2WqZunSiw"], ["text", "Suscipit dolorum quaerat. Et eius animi. Aliquam explicabo harum."], ["created_at", "2018-09-24 03:46:48.631215"], ["updated_at", "2018-09-24 03:46:48.631215"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/HvRkV6WRiLzA-0Vg16T1HQ/logs/iqM2QrcwsWYKs2WqZunSiw/" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#destroy as JSON
+  Parameters: {"file_id"=>"HvRkV6WRiLzA-0Vg16T1HQ", "id"=>"iqM2QrcwsWYKs2WqZunSiw"}
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "iqM2QrcwsWYKs2WqZunSiw"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "HvRkV6WRiLzA-0Vg16T1HQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "logs" SET "deleted_at" = '2018-09-24 03:46:48.638069' WHERE "logs"."deleted_at" IS NULL AND "logs"."id" = $1[0m  [["id", 3]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+Started GET "/files/HvRkV6WRiLzA-0Vg16T1HQ/logs/iqM2QrcwsWYKs2WqZunSiw/" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#show as JSON
+  Parameters: {"file_id"=>"HvRkV6WRiLzA-0Vg16T1HQ", "id"=>"iqM2QrcwsWYKs2WqZunSiw"}
+  [1m[36mTinyLog::Log Load (0.6ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "iqM2QrcwsWYKs2WqZunSiw"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "HvRkV6WRiLzA-0Vg16T1HQ"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "2H-Z8jJsReqeCskHPRsuqg"], ["name", "Lotstring"], ["created_at", "2018-09-24 03:46:48.648791"], ["updated_at", "2018-09-24 03:46:48.648791"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "0dLLkLQWJXITgsTVWAl0Fw"], ["text", "Nisi non ut. Accusamus ducimus quo. Dolore voluptas odit."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.651660"], ["updated_at", "2018-09-24 03:46:48.651660"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "zlelcw45-kdfgc-FmrOn-A"], ["text", "Est aut libero. Ut sit vitae. Blanditiis eos placeat."], ["created_at", "2018-09-24 03:46:48.654420"], ["updated_at", "2018-09-24 03:46:48.654420"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "rP-JIoVATtKbFerTEJY-aQ"], ["text", "Iure soluta placeat. Velit harum fugiat. Corrupti est suscipit."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.657317"], ["updated_at", "2018-09-24 03:46:48.657317"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "LM81fHA010vOd92dY-F69A"], ["text", "Inventore in consequatur. Magnam est omnis. Explicabo dicta alias."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.660284"], ["updated_at", "2018-09-24 03:46:48.660284"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "aiQuFCD62_twErTJXkDIyQ"], ["text", "Aspernatur facilis dolorum. Sed nam consequatur. Aut officia soluta."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.662587"], ["updated_at", "2018-09-24 03:46:48.662587"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "MfOZLMqzip2koXKwxexhnQ"], ["text", "Et quia qui. Officia non delectus. Earum at illum."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.664881"], ["updated_at", "2018-09-24 03:46:48.664881"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "3w002IUapJJ4Xt9ksQhMNA"], ["text", "Facilis aut eveniet. Deserunt voluptas quidem. Vero dolores facilis."], ["created_at", "2018-09-24 03:46:48.667011"], ["updated_at", "2018-09-24 03:46:48.667011"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "NIrmlVE--X5VDLm9nC0J-A"], ["text", "Pariatur quod nobis. Ut vel voluptatem. Occaecati quo deleniti."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.669156"], ["updated_at", "2018-09-24 03:46:48.669156"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "fM20x0CuBlaPMe_M23y-4Q"], ["text", "Beatae quas nemo. Consequatur corporis veniam. Consequatur est qui."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.671443"], ["updated_at", "2018-09-24 03:46:48.671443"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "HwATAx6e1DNKUswe0AO1hg"], ["text", "Natus cum facilis. Mollitia iusto et. Ut quia nostrum."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.673760"], ["updated_at", "2018-09-24 03:46:48.673760"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/2H-Z8jJsReqeCskHPRsuqg/logs" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#index as JSON
+  Parameters: {"file_id"=>"2H-Z8jJsReqeCskHPRsuqg"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "2H-Z8jJsReqeCskHPRsuqg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (1.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 32]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 39ms (Views: 32.4ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "uK0Bsgdk5_DlVI0mTXk4UQ"], ["name", "Tres-Zap"], ["created_at", "2018-09-24 03:46:48.725412"], ["updated_at", "2018-09-24 03:46:48.725412"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "AfHj-BAoMngEo4xbpGPJUA"], ["text", "Ea a facere. Aliquid est id. Nihil aspernatur animi."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.734866"], ["updated_at", "2018-09-24 03:46:48.734866"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 33], ["uid", "-B190GoknIwOqIr_4AisKg"], ["text", "Asperiores harum dolor. Asperiores maiores autem. Distinctio quidem repellat."], ["created_at", "2018-09-24 03:46:48.743465"], ["updated_at", "2018-09-24 03:46:48.743465"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "Y7bBGRfb4tz22DPVeZkqLg"], ["text", "Dolore nihil molestiae. Soluta sint aut. Saepe cumque perspiciatis."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.749155"], ["updated_at", "2018-09-24 03:46:48.749155"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "9mwyD0CLEzGElo5VLudntA"], ["text", "Maiores quo quia. Libero nihil ea. Quia illum dignissimos."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.753092"], ["updated_at", "2018-09-24 03:46:48.753092"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "YfnlvBRelYb8caw78w2cSg"], ["text", "Commodi vel ut. Illo et voluptatem. Non velit rerum."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.756844"], ["updated_at", "2018-09-24 03:46:48.756844"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 33], ["uid", "G_eGkFpprvj_wTI9KLVeAg"], ["text", "Magni et voluptatem. Amet eum ut. Velit voluptatem porro."], ["created_at", "2018-09-24 03:46:48.760413"], ["updated_at", "2018-09-24 03:46:48.760413"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 33], ["uid", "Tdu7O6GY8Cc0sfDMTnayWw"], ["text", "Excepturi vero omnis. Harum eius dolor. Quod qui doloribus."], ["created_at", "2018-09-24 03:46:48.763883"], ["updated_at", "2018-09-24 03:46:48.763883"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "ZA9C9AnvAgHVizlJD28FrQ"], ["text", "Quia blanditiis et. Beatae neque sit. Quas deserunt quasi."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.766774"], ["updated_at", "2018-09-24 03:46:48.766774"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "ltowUr_RZIVfSVTZvfAxsg"], ["text", "Ex distinctio autem. Nihil rem sint. Enim quas deserunt."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.770069"], ["updated_at", "2018-09-24 03:46:48.770069"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "ptBo6LEMqYWbHF8VhGhhIQ"], ["text", "At ipsam a. Dolores sit repellendus. Voluptas perferendis voluptates."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.778061"], ["updated_at", "2018-09-24 03:46:48.778061"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/uK0Bsgdk5_DlVI0mTXk4UQ/logs" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#index as JSON
+  Parameters: {"file_id"=>"uK0Bsgdk5_DlVI0mTXk4UQ"}
+  [1m[36mTinyLog::File Load (0.5ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "uK0Bsgdk5_DlVI0mTXk4UQ"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 33]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "KOawb6ZQiRy8-uyBAj9zCA"], ["name", "Konklux"], ["created_at", "2018-09-24 03:46:48.789032"], ["updated_at", "2018-09-24 03:46:48.789032"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 34], ["uid", "83lc-vn5bQmoCgak20KH3Q"], ["text", "Ut suscipit similique. Ea est et. Perferendis quam doloribus."], ["log_type", 2], ["created_at", "2018-09-24 03:46:48.791279"], ["updated_at", "2018-09-24 03:46:48.791279"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/KOawb6ZQiRy8-uyBAj9zCA/logs/83lc-vn5bQmoCgak20KH3Q" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#show as JSON
+  Parameters: {"file_id"=>"KOawb6ZQiRy8-uyBAj9zCA", "id"=>"83lc-vn5bQmoCgak20KH3Q"}
+  [1m[36mTinyLog::Log Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "83lc-vn5bQmoCgak20KH3Q"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "KOawb6ZQiRy8-uyBAj9zCA"], ["LIMIT", 1]]
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "WK02cZxGse5l0Vu32tCYaQ"], ["name", "Matsoft"], ["created_at", "2018-09-24 03:46:48.799403"], ["updated_at", "2018-09-24 03:46:48.799403"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 35], ["uid", "nO7C0DOTKLy2MMT3W5E0iw"], ["text", "Ducimus praesentium amet. Saepe doloremque assumenda. Quaerat aspernatur velit."], ["log_type", 3], ["created_at", "2018-09-24 03:46:48.802025"], ["updated_at", "2018-09-24 03:46:48.802025"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/WK02cZxGse5l0Vu32tCYaQ/logs/nO7C0DOTKLy2MMT3W5E0iw" for 127.0.0.1 at 2018-09-24 00:46:48 -0300
+Processing by LogsController#show as JSON
+  Parameters: {"file_id"=>"WK02cZxGse5l0Vu32tCYaQ", "id"=>"nO7C0DOTKLy2MMT3W5E0iw"}
+  [1m[36mTinyLog::Log Load (0.5ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "nO7C0DOTKLy2MMT3W5E0iw"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "WK02cZxGse5l0Vu32tCYaQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (37.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.3ms)[0m  [1m[35mALTER TABLE "files" DISABLE TRIGGER ALL;ALTER TABLE "logs" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (70.6ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+             tablename <> 'schema_migrations'  AND tablename <> 'ar_internal_metadata'  AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (42.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'tinylog_test'[0m
+  [1m[35m (436.7ms)[0m  [1m[35mTRUNCATE TABLE "public"."files", "public"."logs" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "files" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "logs" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started POST "/files" for 127.0.0.1 at 2018-09-24 19:24:24 -0300
+Processing by FilesController#create as JSON
+  Parameters: {"file"=>{"name"=>"test"}}
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "y2ostZgVve0x5sMuo-heKA"], ["name", "test"], ["created_at", "2018-09-24 22:24:24.348694"], ["updated_at", "2018-09-24 22:24:24.348694"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 101ms (Views: 41.8ms | ActiveRecord: 37.6ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started POST "/files" for 127.0.0.1 at 2018-09-24 19:24:24 -0300
+Processing by FilesController#create as JSON
+  Parameters: {"file"=>{"name"=>"test"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "usp7h_NUwLzeaXQ9st7yQw"], ["name", "test"], ["created_at", "2018-09-24 22:24:24.422421"], ["updated_at", "2018-09-24 22:24:24.422421"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 8ms (Views: 1.3ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "TS4TVi6hWxNAb4w4uwuHJQ"], ["name", "Transcof"], ["created_at", "2018-09-24 22:24:25.053391"], ["updated_at", "2018-09-24 22:24:25.053391"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/TS4TVi6hWxNAb4w4uwuHJQ" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#destroy as JSON
+  Parameters: {"id"=>"TS4TVi6hWxNAb4w4uwuHJQ"}
+  [1m[36mTinyLog::File Load (0.6ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "TS4TVi6hWxNAb4w4uwuHJQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "files" SET "deleted_at" = '2018-09-24 22:24:25.074411' WHERE "files"."deleted_at" IS NULL AND "files"."id" = $1[0m  [["id", 3]]
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "MvcoSBO9pKkh7F-qViTstA"], ["name", "Regrant"], ["created_at", "2018-09-24 22:24:25.078921"], ["updated_at", "2018-09-24 22:24:25.078921"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/MvcoSBO9pKkh7F-qViTstA" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#destroy as JSON
+  Parameters: {"id"=>"MvcoSBO9pKkh7F-qViTstA"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "MvcoSBO9pKkh7F-qViTstA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "files" SET "deleted_at" = '2018-09-24 22:24:25.081992' WHERE "files"."deleted_at" IS NULL AND "files"."id" = $1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+Started GET "/files/MvcoSBO9pKkh7F-qViTstA" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#show as JSON
+  Parameters: {"id"=>"MvcoSBO9pKkh7F-qViTstA"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "MvcoSBO9pKkh7F-qViTstA"], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "NYo15TPZym4KNTG6kxLG9g"], ["name", "Otcom"], ["created_at", "2018-09-24 22:24:25.088270"], ["updated_at", "2018-09-24 22:24:25.088270"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "ryEg7qsdQvduV1k5MsV8LA"], ["name", "Fixflex"], ["created_at", "2018-09-24 22:24:25.090008"], ["updated_at", "2018-09-24 22:24:25.090008"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "vR2JwwVXgJTWb9R88Hgg1A"], ["name", "Subin"], ["created_at", "2018-09-24 22:24:25.091688"], ["updated_at", "2018-09-24 22:24:25.091688"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "u1EEYD4piPuQ5g4-BWyuhQ"], ["name", "Veribet"], ["created_at", "2018-09-24 22:24:25.093364"], ["updated_at", "2018-09-24 22:24:25.093364"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "xk00Ial-c9Qa_CiI1MORng"], ["name", "Ronstring"], ["created_at", "2018-09-24 22:24:25.095183"], ["updated_at", "2018-09-24 22:24:25.095183"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "IVvb7PhPKToHLwQFrhMQ3Q"], ["name", "Tres-Zap"], ["created_at", "2018-09-24 22:24:25.097017"], ["updated_at", "2018-09-24 22:24:25.097017"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "IF-hSI-k_f_Ip5JaKPjmyQ"], ["name", "Redhold"], ["created_at", "2018-09-24 22:24:25.098758"], ["updated_at", "2018-09-24 22:24:25.098758"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "NTjJeAFS6YbbOZsVWedCDw"], ["name", "Asoka"], ["created_at", "2018-09-24 22:24:25.100537"], ["updated_at", "2018-09-24 22:24:25.100537"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "0Ckp2yCSH2oPDmOB6Mfy-Q"], ["name", "Y-Solowarm"], ["created_at", "2018-09-24 22:24:25.102290"], ["updated_at", "2018-09-24 22:24:25.102290"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "DLFl9e6iQsFB6BBYzTDYIQ"], ["name", "Treeflex"], ["created_at", "2018-09-24 22:24:25.104986"], ["updated_at", "2018-09-24 22:24:25.104986"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "xT0kjlAsFESNTdeya7iRqA"], ["name", "Ventosanzap"], ["created_at", "2018-09-24 22:24:25.112097"], ["updated_at", "2018-09-24 22:24:25.112097"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "32u2hAq_KLNyntGeMvMdpQ"], ["name", "Subin"], ["created_at", "2018-09-24 22:24:25.113734"], ["updated_at", "2018-09-24 22:24:25.113734"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "l6iVAhu-u-zwXIdXn4citQ"], ["name", "Vagram"], ["created_at", "2018-09-24 22:24:25.115489"], ["updated_at", "2018-09-24 22:24:25.115489"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "WqzA_4WGZWG_0-XZ5ToJ6g"], ["name", "Pannier"], ["created_at", "2018-09-24 22:24:25.117255"], ["updated_at", "2018-09-24 22:24:25.117255"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "KaVvzQYgbzWiaYT_ZMUv8A"], ["name", "Zoolab"], ["created_at", "2018-09-24 22:24:25.118909"], ["updated_at", "2018-09-24 22:24:25.118909"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "rOcKGyrE1i6YReHNfH074Q"], ["name", "Zamit"], ["created_at", "2018-09-24 22:24:25.120654"], ["updated_at", "2018-09-24 22:24:25.120654"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "TuMz6yNPB6seBmeQj-VG6A"], ["name", "Zontrax"], ["created_at", "2018-09-24 22:24:25.122384"], ["updated_at", "2018-09-24 22:24:25.122384"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "xYKSaKz2cy4azx_IwmRY-g"], ["name", "Bitchip"], ["created_at", "2018-09-24 22:24:25.123952"], ["updated_at", "2018-09-24 22:24:25.123952"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "W_s39_cmB1LCZ6dayHP6Fw"], ["name", "Veribet"], ["created_at", "2018-09-24 22:24:25.125466"], ["updated_at", "2018-09-24 22:24:25.125466"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "WNrm5zHoEg2LgnyqcxJbDg"], ["name", "Aerified"], ["created_at", "2018-09-24 22:24:25.126986"], ["updated_at", "2018-09-24 22:24:25.126986"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#index as JSON
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT "files".* FROM "files" WHERE "files"."deleted_at" IS NULL[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "i6a-CfTF-zqENM4ElHUlnQ"], ["name", "Stronghold"], ["created_at", "2018-09-24 22:24:25.133056"], ["updated_at", "2018-09-24 22:24:25.133056"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/i6a-CfTF-zqENM4ElHUlnQ" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#show as JSON
+  Parameters: {"id"=>"i6a-CfTF-zqENM4ElHUlnQ"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "i6a-CfTF-zqENM4ElHUlnQ"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "ZHUu0WlmC-zy-toPSzpF-w"], ["name", "Treeflex"], ["created_at", "2018-09-24 22:24:25.139848"], ["updated_at", "2018-09-24 22:24:25.139848"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/ZHUu0WlmC-zy-toPSzpF-w" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#show as JSON
+  Parameters: {"id"=>"ZHUu0WlmC-zy-toPSzpF-w"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "ZHUu0WlmC-zy-toPSzpF-w"], ["LIMIT", 1]]
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "wNFrgusvK86eVA8zIBF2OA"], ["name", "Y-find"], ["created_at", "2018-09-24 22:24:25.147032"], ["updated_at", "2018-09-24 22:24:25.147032"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started PATCH "/files/wNFrgusvK86eVA8zIBF2OA" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#update as JSON
+  Parameters: {"file"=>{"name"=>"Voltsillam"}, "id"=>"wNFrgusvK86eVA8zIBF2OA"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "wNFrgusvK86eVA8zIBF2OA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "files" SET "name" = $1, "updated_at" = $2 WHERE "files"."id" = $3[0m  [["name", "Voltsillam"], ["updated_at", "2018-09-24 22:24:25.150475"], ["id", 27]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "JWj6CBxcS1vMk6HfebqEeg"], ["name", "Domainer"], ["created_at", "2018-09-24 22:24:25.154668"], ["updated_at", "2018-09-24 22:24:25.154668"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started PATCH "/files/JWj6CBxcS1vMk6HfebqEeg" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by FilesController#update as JSON
+  Parameters: {"file"=>{"name"=>"Subin"}, "id"=>"JWj6CBxcS1vMk6HfebqEeg"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "JWj6CBxcS1vMk6HfebqEeg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "files" SET "name" = $1, "updated_at" = $2 WHERE "files"."id" = $3[0m  [["name", "Subin"], ["updated_at", "2018-09-24 22:24:25.158083"], ["id", 28]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered FileSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "5KMNc3MDw85XdQtNedQW7A"], ["name", "Flowdesk"], ["created_at", "2018-09-24 22:24:25.162169"], ["updated_at", "2018-09-24 22:24:25.162169"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/files/5KMNc3MDw85XdQtNedQW7A/logs" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#create as JSON
+  Parameters: {"log"=>{"text"=>"Consequuntur qui voluptatem. Consequuntur eveniet dolore. Quis in debitis.", "type"=>"TINY_LOG_INFO"}, "file_id"=>"5KMNc3MDw85XdQtNedQW7A"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "5KMNc3MDw85XdQtNedQW7A"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 29], ["uid", "vv-NKvwG4zCKWAtJT8NNpw"], ["text", "Consequuntur qui voluptatem. Consequuntur eveniet dolore. Quis in debitis."], ["created_at", "2018-09-24 22:24:25.202885"], ["updated_at", "2018-09-24 22:24:25.202885"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 46ms (Views: 15.4ms | ActiveRecord: 3.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "OYtbMZLA3UyVBKtPG_wpwA"], ["name", "Kanlam"], ["created_at", "2018-09-24 22:24:25.223167"], ["updated_at", "2018-09-24 22:24:25.223167"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 30], ["uid", "0NBUnAkAMhkIcF5Rbn-Ktg"], ["text", "Nihil saepe voluptas. Sequi modi impedit. Nihil quasi voluptatem."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.225465"], ["updated_at", "2018-09-24 22:24:25.225465"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/OYtbMZLA3UyVBKtPG_wpwA/logs/0NBUnAkAMhkIcF5Rbn-Ktg/" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#destroy as JSON
+  Parameters: {"file_id"=>"OYtbMZLA3UyVBKtPG_wpwA", "id"=>"0NBUnAkAMhkIcF5Rbn-Ktg"}
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "0NBUnAkAMhkIcF5Rbn-Ktg"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "OYtbMZLA3UyVBKtPG_wpwA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "logs" SET "deleted_at" = '2018-09-24 22:24:25.229855' WHERE "logs"."deleted_at" IS NULL AND "logs"."id" = $1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "3f2bPlgZ7GKaybZq-Pxc1A"], ["name", "Lotstring"], ["created_at", "2018-09-24 22:24:25.233477"], ["updated_at", "2018-09-24 22:24:25.233477"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 31], ["uid", "x03VlCFPNO9Z01yRyJM9WA"], ["text", "Dolores minima et. Error omnis quis. Nobis consequatur aliquid."], ["log_type", 2], ["created_at", "2018-09-24 22:24:25.235588"], ["updated_at", "2018-09-24 22:24:25.235588"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/files/3f2bPlgZ7GKaybZq-Pxc1A/logs/x03VlCFPNO9Z01yRyJM9WA/" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#destroy as JSON
+  Parameters: {"file_id"=>"3f2bPlgZ7GKaybZq-Pxc1A", "id"=>"x03VlCFPNO9Z01yRyJM9WA"}
+  [1m[36mTinyLog::Log Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "x03VlCFPNO9Z01yRyJM9WA"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "3f2bPlgZ7GKaybZq-Pxc1A"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "logs" SET "deleted_at" = '2018-09-24 22:24:25.239657' WHERE "logs"."deleted_at" IS NULL AND "logs"."id" = $1[0m  [["id", 3]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+Started GET "/files/3f2bPlgZ7GKaybZq-Pxc1A/logs/x03VlCFPNO9Z01yRyJM9WA/" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#show as JSON
+  Parameters: {"file_id"=>"3f2bPlgZ7GKaybZq-Pxc1A", "id"=>"x03VlCFPNO9Z01yRyJM9WA"}
+  [1m[36mTinyLog::Log Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "x03VlCFPNO9Z01yRyJM9WA"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "3f2bPlgZ7GKaybZq-Pxc1A"], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "fAbb83rx1X_IF55GmRnp6Q"], ["name", "Daltfresh"], ["created_at", "2018-09-24 22:24:25.246596"], ["updated_at", "2018-09-24 22:24:25.246596"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "Na2C6qphrKSP6Aerw_9HQg"], ["text", "Et eveniet nulla. Placeat est velit. Sit quasi cum."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.249173"], ["updated_at", "2018-09-24 22:24:25.249173"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "WnrT0eH0ryQKhDvSm6d-1g"], ["text", "Reprehenderit sit ut. Magnam culpa accusamus. Quia omnis non."], ["created_at", "2018-09-24 22:24:25.251182"], ["updated_at", "2018-09-24 22:24:25.251182"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "TfzfF3FZ_oS2n9VHnMUsfg"], ["text", "Voluptas cupiditate illum. Facere ea eligendi. Laudantium qui reprehenderit."], ["created_at", "2018-09-24 22:24:25.253167"], ["updated_at", "2018-09-24 22:24:25.253167"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "05508joHNQckeH4Us9pU0A"], ["text", "Nobis soluta magnam. Voluptas labore necessitatibus. Quisquam aut est."], ["created_at", "2018-09-24 22:24:25.255108"], ["updated_at", "2018-09-24 22:24:25.255108"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "KHMD4oWfSatYomEIkLEBsQ"], ["text", "Similique eos inventore. Culpa molestias ut. Qui qui est."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.257046"], ["updated_at", "2018-09-24 22:24:25.257046"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "i0Pgft_Bnff96VsWTW2yIA"], ["text", "Officiis dolores occaecati. Et perferendis praesentium. Corrupti omnis ea."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.259551"], ["updated_at", "2018-09-24 22:24:25.259551"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "JyCzxK9ye8zoPegYUPd08g"], ["text", "Vero temporibus et. Facere qui molestiae. Autem esse sint."], ["log_type", 2], ["created_at", "2018-09-24 22:24:25.261556"], ["updated_at", "2018-09-24 22:24:25.261556"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "2A8mIOZy81BCUwvXa13fKw"], ["text", "Occaecati consequatur dolores. Minima delectus facere. Alias incidunt voluptas."], ["created_at", "2018-09-24 22:24:25.263509"], ["updated_at", "2018-09-24 22:24:25.263509"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 32], ["uid", "EecFSp3Xmp-mD3wDb8sQcA"], ["text", "Aspernatur molestiae sint. Necessitatibus placeat doloribus. Est necessitatibus autem."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.265597"], ["updated_at", "2018-09-24 22:24:25.265597"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 32], ["uid", "hFJLb8zVv2BCoqfd5iRCzg"], ["text", "Nemo eos inventore. Totam magnam tempore. Hic voluptas necessitatibus."], ["created_at", "2018-09-24 22:24:25.267627"], ["updated_at", "2018-09-24 22:24:25.267627"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/fAbb83rx1X_IF55GmRnp6Q/logs" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#index as JSON
+  Parameters: {"file_id"=>"fAbb83rx1X_IF55GmRnp6Q"}
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "fAbb83rx1X_IF55GmRnp6Q"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 32]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.92ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "F75rj73AeliSNiSSU_s7tA"], ["name", "Otcom"], ["created_at", "2018-09-24 22:24:25.294921"], ["updated_at", "2018-09-24 22:24:25.294921"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "Vh2lK2Pxde5sOZP3EmcP3g"], ["text", "Itaque incidunt mollitia. Aut quas corrupti. Est ut tempore."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.297157"], ["updated_at", "2018-09-24 22:24:25.297157"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "A3T215XlICGp72OdRRsAdA"], ["text", "Quam consequatur natus. Repudiandae ut sunt. Sapiente quo sed."], ["log_type", 2], ["created_at", "2018-09-24 22:24:25.299272"], ["updated_at", "2018-09-24 22:24:25.299272"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "W62elrv_KbNqMiQwNG6WdQ"], ["text", "Et aperiam nisi. Sint aut vel. Et excepturi illum."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.301484"], ["updated_at", "2018-09-24 22:24:25.301484"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "_rARHMLXex4Y8srzHk3q-w"], ["text", "Excepturi illum in. Accusantium doloribus voluptatem. Consequatur sint saepe."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.303600"], ["updated_at", "2018-09-24 22:24:25.303600"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "u3bvkju5Uu8ZS5DSBI7wzQ"], ["text", "Velit maiores delectus. Ipsam nihil quas. Accusamus eum qui."], ["log_type", 2], ["created_at", "2018-09-24 22:24:25.305815"], ["updated_at", "2018-09-24 22:24:25.305815"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "CigWqb1juSSkEyKtik5t1A"], ["text", "Quis totam cumque. Commodi dolore qui. Blanditiis ea enim."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.307981"], ["updated_at", "2018-09-24 22:24:25.307981"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 33], ["uid", "3uOCK1-KX5arAhTAbWvK_Q"], ["text", "Et excepturi exercitationem. Et sed deserunt. Voluptas et aliquid."], ["created_at", "2018-09-24 22:24:25.310057"], ["updated_at", "2018-09-24 22:24:25.310057"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "I5KLc5DFwdwugCafKEhPaQ"], ["text", "Voluptatem suscipit quas. Eveniet consequatur sunt. Maiores dolorem voluptate."], ["log_type", 2], ["created_at", "2018-09-24 22:24:25.312102"], ["updated_at", "2018-09-24 22:24:25.312102"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "WENwLOqLUW5hc-FyKUoQDQ"], ["text", "Odit ea ad. Id aut maxime. Dolores laboriosam voluptas."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.314119"], ["updated_at", "2018-09-24 22:24:25.314119"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 33], ["uid", "P_JwgvXEWGffGdub9w9H4Q"], ["text", "Qui necessitatibus molestias. Dolorum nesciunt aut. Voluptatum ratione illum."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.316175"], ["updated_at", "2018-09-24 22:24:25.316175"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/F75rj73AeliSNiSSU_s7tA/logs" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#index as JSON
+  Parameters: {"file_id"=>"F75rj73AeliSNiSSU_s7tA"}
+  [1m[36mTinyLog::File Load (0.4ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "F75rj73AeliSNiSSU_s7tA"], ["LIMIT", 1]]
+  [1m[36mTinyLog::Log Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."file_id" = $1[0m  [["file_id", 33]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "Xb6Ldaypl7k35noqLZHxXg"], ["name", "Solarbreeze"], ["created_at", "2018-09-24 22:24:25.325974"], ["updated_at", "2018-09-24 22:24:25.325974"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "log_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["file_id", 34], ["uid", "D-bkAyMMIBSYynQ7Lm2Lqw"], ["text", "Ea delectus autem. Asperiores ex in. Sint reiciendis magni."], ["log_type", 3], ["created_at", "2018-09-24 22:24:25.328325"], ["updated_at", "2018-09-24 22:24:25.328325"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/Xb6Ldaypl7k35noqLZHxXg/logs/D-bkAyMMIBSYynQ7Lm2Lqw" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#show as JSON
+  Parameters: {"file_id"=>"Xb6Ldaypl7k35noqLZHxXg", "id"=>"D-bkAyMMIBSYynQ7Lm2Lqw"}
+  [1m[36mTinyLog::Log Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "D-bkAyMMIBSYynQ7Lm2Lqw"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "Xb6Ldaypl7k35noqLZHxXg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "files" ("uid", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["uid", "mDnZYXKLxtTxyp-w0MqEXg"], ["name", "Tres-Zap"], ["created_at", "2018-09-24 22:24:25.335989"], ["updated_at", "2018-09-24 22:24:25.335989"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("file_id", "uid", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["file_id", 35], ["uid", "fmz-n6Pxi4IKccouOMgCGA"], ["text", "Ut modi consequatur. Distinctio aliquam aut. Sequi qui molestiae."], ["created_at", "2018-09-24 22:24:25.338324"], ["updated_at", "2018-09-24 22:24:25.338324"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/files/mDnZYXKLxtTxyp-w0MqEXg/logs/fmz-n6Pxi4IKccouOMgCGA" for 127.0.0.1 at 2018-09-24 19:24:25 -0300
+Processing by LogsController#show as JSON
+  Parameters: {"file_id"=>"mDnZYXKLxtTxyp-w0MqEXg", "id"=>"fmz-n6Pxi4IKccouOMgCGA"}
+  [1m[36mTinyLog::Log Load (0.4ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."deleted_at" IS NULL AND "logs"."uid" = $1 ORDER BY "logs"."id" ASC LIMIT $2[0m  [["uid", "fmz-n6Pxi4IKccouOMgCGA"], ["LIMIT", 1]]
+  [1m[36mTinyLog::File Load (0.3ms)[0m  [1m[34mSELECT  "files".* FROM "files" WHERE "files"."deleted_at" IS NULL AND "files"."uid" = $1 ORDER BY "files"."id" ASC LIMIT $2[0m  [["uid", "mDnZYXKLxtTxyp-w0MqEXg"], ["LIMIT", 1]]
+[active_model_serializers] Rendered LogSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
